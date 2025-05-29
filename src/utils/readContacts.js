@@ -7,6 +7,6 @@ export const readContacts = async () => {
     return JSON.parse(data);
   } catch (error) {
     console.error('Error reading contacts:', error);
-    throw new Error('Could not read contacts from file');
+    return []; // або throw error, залежно від задачі
   }
 };
